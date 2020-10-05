@@ -10,9 +10,9 @@ This CMakeLists.txt manages the building of a minimal libtorch from [PyTorch 1.6
 
 ## Usage
 ### build the library
-
+#### Linux
     rm -rf build && cmake -S . -B build
-
+#### Windows
+    rmdir /s /q build && cmake -S . -B build
 #### Cmake option RESET
-
 This restores the PyTorch source working tree from HEAD and cleans recursively without respecting `.gitignore` This can be enabled by passing the option `-D RESET=1`.
