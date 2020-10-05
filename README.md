@@ -11,7 +11,7 @@ This CMakeLists.txt manages the building of a minimal libtorch from [PyTorch 1.6
 ## Usage
 ### build the library
 
-    rm -rf build && cmake -S . -B build > cm_out.txt 2>&1
+    rm -rf build && cmake -S . -B build
 
 #### Cmake option RESET
 
