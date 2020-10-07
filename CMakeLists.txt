@@ -11,9 +11,12 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 option(RESET "Restore and clean PyTorch source tree")
 option(BUILD_SHARED_LIBS "build libtorch.so" ON)
+option(DEBUG "enable debug builds" ON)
 
-set(ENV{DEBUG} 1) #enable debug builds (-g -O0)
+if(DEBUG)
+  set(ENV{DEBUG} 1) #enable debug builds (-g -O0)
 #set(ENV{REL_WITH_DEB_INFO} 1) #enable debug symbols with optimizations (-g -O3)
+endif()
 set(ENV{USE_DISTRIBUTED} 0) #disable distributed (c10d, gloo, mpi, etc.) build.
 set(ENV{USE_MKLDNN} 0) #disable using MKL-DNN.
 set(ENV{USE_CUDA} 0) #disable compiling CUDA, to save compile time)
