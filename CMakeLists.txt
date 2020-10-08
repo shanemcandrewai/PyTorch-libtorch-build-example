@@ -10,7 +10,6 @@ set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 option(RESET "Restore and clean PyTorch source tree")
-option(BUILD_SHARED_LIBS "build libtorch.so" ON)
 option(DEBUG "enable debug builds" ON)
 
 if(DEBUG)
@@ -25,9 +24,7 @@ set(ENV{USE_FBGEMM} 0) #disable using FBGEMM (quantized 8-bit server operators).
 set(ENV{USE_NNPACK} 0) #disable compiling with NNPACK.
 set(ENV{USE_QNNPACK} 0) #disable QNNPACK build (quantized 8-bit operators).
 set(ENV{USE_XNNPACK} 0) #disable compiling with XNNPACK.
-
-set(ENV{BUILD_CAFFE2_OPS} 0) #disable build of Caffe2 operators
-
+set(ENV{BUILD_CAFFE2} 0) #disable Caffe2 build
 
 if(RESET)
   find_package(Git)
