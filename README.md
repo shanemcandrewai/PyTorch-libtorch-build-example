@@ -17,8 +17,10 @@ This CMakeLists.txt manages the building of a minimal libtorch from [PyTorch 1.6
 #### Cmake options
 ##### RESET
 This restores the PyTorch source working tree from HEAD and cleans recursively without respecting `.gitignore` This can be enabled by passing the option `-D RESET=1`.
-##### BUILD_SHARED_LIBS
-The build generates a shared library by default. This can be disabled by passing the option `-D BUILD_SHARED_LIBS=0`.
+##### NO_BUILD_CAFFE2 (dependent on RESET)
+The build generates the caffe2 library by default. This can be disabled by passing the option `-D NO_BUILD_CAFFE=1`.
+##### NO_BUILD_SHARED_LIBS (dependent on RESET)
+The build generates a shared library by default. This can be disabled by passing the option `-D NO_BUILD_SHARED_LIBS=1`.
 ##### DEBUG
 The build has debugging information by default. This can be disabled by passing the option `-D DEBUG=0`.
 ## Result
