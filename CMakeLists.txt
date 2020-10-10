@@ -47,9 +47,9 @@ if(RESET)
     string(REPLACE "CMAKE_CURRENT_LIST_DIR}/../third_party/protobuf/cmake" "PYTORCH_SRC_DIR}/third_party/protobuf/cmake ${CMAKE_BINARY_DIR}/third_party/protobuf/cmake" FILE_CONTENTS "${FILE_CONTENTS}")
     file(WRITE ${PYTORCH_SRC_DIR}/cmake/ProtoBuf.cmake "${FILE_CONTENTS}")
 
-    file(READ ${PYTORCH_SRC_DIR}/third_party/FP16/CMakeLists.txt FILE_CONTENTS)
-    string(REPLACE "CMAKE_SOURCE_DIR" "PYTORCH_SRC_DIR" FILE_CONTENTS "${FILE_CONTENTS}")
-    file(WRITE ${PYTORCH_SRC_DIR}/third_party/FP16/CMakeLists.txt "${FILE_CONTENTS}")
+#    file(READ ${PYTORCH_SRC_DIR}/third_party/FP16/CMakeLists.txt FILE_CONTENTS)
+#    string(REPLACE "CMAKE_SOURCE_DIR" "PYTORCH_SRC_DIR" FILE_CONTENTS "${FILE_CONTENTS}")
+#    file(WRITE ${PYTORCH_SRC_DIR}/third_party/FP16/CMakeLists.txt "${FILE_CONTENTS}")
 
 endif()
 

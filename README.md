@@ -1,6 +1,6 @@
 # PyTorch libtorch build example 
 
-This CMakeLists.txt manages the building of a minimal libtorch from [PyTorch 1.6](https://github.com/pytorch/pytorch/tree/1.6)
+This CMakeLists.txt manages the building of a minimal libtorch from [PyTorch 1.6](https://github.com/pytorch/pytorch/tree/1.6) by modifying paths in the PyTorch source tree and loading the main [CMakeLists.txt](https://github.com/pytorch/pytorch/blob/v1.6.0/CMakeLists.txt) using `include(${PYTORCH_SRC_DIR}/CMakeLists.txt)`
 
 ## Prerequisites
 
@@ -19,7 +19,3 @@ This CMakeLists.txt manages the building of a minimal libtorch from [PyTorch 1.6
 This restores the PyTorch source working tree from HEAD and cleans recursively without respecting `.gitignore` This can be enabled by passing the option `-D RESET=1`.
 ##### NO_BUILD_SHARED_LIBS (dependent on RESET)
 The build does not generate a shared library by default. This can be disabled by passing the option `-D RESET=1 -D NO_BUILD_SHARED_LIBS=0`.
-##### DEBUG
-The build has debugging information by default. This can be disabled by passing the option `-D DEBUG=0`.
-## Result
-`[build derectory]/lib` contains the libraries and `[build directory]/build/aten/src/` contains the generated header file `TensorBody.h`
