@@ -16,6 +16,6 @@ This CMakeLists.txt manages the building of a minimal libtorch from [PyTorch 1.6
     rmdir /s /q build && cmake -S . -B build
 #### Cmake options
 ##### RESET
-This restores the PyTorch source working tree from HEAD and cleans recursively without respecting `.gitignore` This can be enabled by passing the option `-D RESET=1`.
+This restores the PyTorch source working tree from HEAD and reapplies the modifications to paths. This can be enabled by passing the option `-D RESET=1`.
 ##### NO_BUILD_SHARED_LIBS (dependent on RESET)
 The build does not generate a shared library by default. This can be disabled by passing the option `-D RESET=1 -D NO_BUILD_SHARED_LIBS=0`.
